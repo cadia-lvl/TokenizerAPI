@@ -9,6 +9,20 @@ __version__ = 0.1
 
 app = FastAPI()
 
+def correct_response(content):
+
+    texts = []
+    for j, sentence in enumerate(content):
+        text = []
+        for i,token in enumerate(sentence.split()):
+            text.append({ "content": token })
+        texts.append({"texts":text})
+    response = {
+        "response":{
+        "type":"texts",
+        "texts":texts }}
+    return JSONResponse(response)
+
 class TokenizerInput(BaseModel):
     type: str = "text"
     content: str
@@ -19,25 +33,20 @@ def home() -> str:
 <html>
     <head><title>Tokenizer API</title></head>
     <body>
-        <h1>Greynir API Server v{0}</h1>
+        <h1>Tokenizer API Server</h1>
         <ul><li><a href="/docs">Documentation</a></li></ul>
     </body>
 </html>
 """.format(__version__)
 
-@app.post('tokenize')
+@app.post('/tokenize')
 def tokenize(request: TokenizerInput):
     return tokenize_impl(request.content)
+
 
 @app.post('/tokenize/impl')
 def tokenize_impl(text : str) -> JSONResponse:
     g = split_into_sentences(text)
-    content = []
-    for sentence in g:
-        tokens = sentence.split()
-        content.append(tokens)
-    response = {"response":{
-                "type":"texts",
-                "content":content
-            }}
-    return JSONResponse(content=response)
+    return correct_response(g)
+
+

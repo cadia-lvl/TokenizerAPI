@@ -1,4 +1,4 @@
 docker stop tokenizer
 docker container rm tokenizer
-docker build . -t tokenizer:v1
-docker run -d -p 8080:8080 --name=tokenizer tokenizer:v1
+docker build . -t glaciersg/tokenizer_api:latest
+docker run -d -p 8080:8080 --name=tokenizer glaciersg/tokenizer_api:latest

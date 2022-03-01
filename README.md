@@ -25,4 +25,5 @@ For testing if the [elg specifications](https://european-language-grid.readthedo
 This ELG API was developed by the [language and voice labs](https://lvl.ru.is/) at [Reykjavík University](https://en.ru.is/) in EU's CEF project: [Microservices at your service](https://www.lingsoft.fi/en/microservices-at-your-service-bridging-gap-between-nlp-research-and-industry).
 
 # European Language Grid
-The docker image is hosted [here](https://hub.docker.com/r/glaciersg/tokenizer_api) and is running on the european language grid as [icelandic tokenizer](https://live.european-language-grid.eu/catalogue/tool-service/17480).
+The docker image is hosted [here](https://hub.docker.com/r/glaciersg/tokenizer_api) and is running on the european language grid as [
+Tokenizer for Icelandic text (running on elg)](https://live.european-language-grid.eu/catalogue/tool-service/17480).

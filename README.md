@@ -29,5 +29,5 @@ The docker image is hosted [here](https://hub.docker.com/r/glaciersg/tokenizer_a
 ELG API for Icelandic Tokenizer](https://live.european-language-grid.eu/catalogue/tool-service/17480).
 
 # Underlying tool
-The main underlying tool is [Tokenizer](https://github.com/mideind/Tokenizer) by [Miðeind](https://mideind.is/), which is licensed under this [MIT license](https://github.com/mideind/Tokenizer/blob/master/LICENSE).  The ELG API implementation imports the corresponding [PyPi package](https://pypi.org/project/tokenizer/).
+The underlying tokenizer is [Tokenizer](https://github.com/mideind/Tokenizer) by [Miðeind](https://mideind.is/), which is licensed under this [MIT license](https://github.com/mideind/Tokenizer/blob/master/LICENSE).  The ELG API implementation imports the corresponding [PyPi package](https://pypi.org/project/tokenizer/).
 
